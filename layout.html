@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d4c536fd94.js" crossorigin="anonymous"></script>
+  <link rel = "stylesheet" href = "style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+    <title>To-Do-List</title>
+</head>
+<body>
+  <header>
+    To-Do-List
+  </header>
+  <div class = "instruction">
+    <p class = 'intro'>
+      Create your note by entering text
+    </p>
+    <p class = "rule1">
+      Click on item to mark as finished
+    </p>
+    <p class = "rule2">
+      Click on the "X" to remove item
+    </p>
+  </div>
+  <div class = "input">
+    <label for = "userInput">Enter the text here</label>
+    <br>
+    <div class = "contr">
+    <input id = "userInput" type = "text" placeholder= "Item..." minlength="1" maxlength="30">
+    <button id = "button"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+  <div class = "row">
+    <ul class="items">
+    </ul>
+  </div>
+</body>
+<script type = "text/javascript" src = "new.js"></script>
+</html>
+
