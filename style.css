@@ -16,7 +16,7 @@ header {
 }
 
 .instruction .intro {
-    font-size: 30px;
+    font-size: 25px;
     position: relative;
     margin-top: 50px;
     width: 100%;
@@ -24,7 +24,7 @@ header {
 }
 
 .instruction .rule1 {
-    font-size: 30px;
+    font-size: 25px;
     position: relative;
     margin-top: 35px;
     width: 100%;
@@ -33,7 +33,14 @@ header {
 }
 
 .instruction .rule2 {
-    font-size: 30px;
+    font-size: 25px;
+    margin-top: 35px;
+    right: 200px;
+    width: 100%;
+    text-align: center;
+}
+.instruction .rule3 {
+    font-size: 25px;
     margin-top: 35px;
     right: 200px;
     width: 100%;
@@ -52,7 +59,18 @@ header {
 #button:hover{
     background-color: #F6416C;
 }
-
+#clear{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: black;
+    margin: 0 1px;
+    color: white;
+    transition: all 0.75s linear;
+}
+#clear:hover{
+    background-color: #F6416C;
+}
 .contr {
     display: flex;
     justify-content: center;
@@ -124,4 +142,8 @@ label {
 }
 .delete {
     display: none;
+}
+.currDate {
+    color: black;
+    font-size: 20px;
 }

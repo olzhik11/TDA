@@ -1,6 +1,7 @@
 let button = document.getElementById("button");
 let input = document.getElementById("userInput");
 let ul = document.querySelector("ul");
+let deleteButton = document.getElementById("clear")
 let listItem = document.getElementsByTagName("li");
 let inputLength = () => {
     return input.value.length;
@@ -35,6 +36,10 @@ function addAfterKey(event){
         createElement();
     }
 }
+function clearTheList(){
+    let list = document.querySelector("ul").innerHTML = '';
+}
+
 button.addEventListener("click", addAfter);
 input.addEventListener("keypress", addAfterKey);
-
+deleteButton.addEventListener("click", clearTheList)

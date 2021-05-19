@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -12,7 +12,14 @@
 <body>
   <header>
     To-Do-List
+    <div class = "currDate">
+      <p id = "dateDate">
+      </p>
+      <p id = "dateTime">
+      </p>
+    </div>
   </header>
+
   <div class = "instruction">
     <p class = 'intro'>
       Create your note by entering text
@@ -21,7 +28,10 @@
       Click on item to mark as finished
     </p>
     <p class = "rule2">
-      Click on the "X" to remove item
+      Click on the "<i class="fas fa-trash-alt"></i>" to remove item
+    </p>
+    <p class = "rule3">
+      Click on the "<i class="fas fa-broom"></i>" to remove all items
     </p>
   </div>
   <div class = "input">
@@ -30,13 +40,39 @@
     <div class = "contr">
     <input id = "userInput" type = "text" placeholder= "Item..." minlength="1" maxlength="30">
     <button id = "button"><i class="fas fa-plus"></i></button>
+    <button id = "clear"><i class="fas fa-broom"></i></button>
     </div>
   </div>
   <div class = "row">
     <ul class="items">
     </ul>
   </div>
+  <script type = "text/javascript" src = "new.js"></script>
+  <script type="text/javascript">
+    let today = new Date()
+    const weekdayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const monthList = ["January", "February", "March", "April", "May", "June", "July",
+                       "August", "September", "October", "November", "December"]
+    let weekday = weekdayList[today.getDay()]
+    let month = monthList[today.getMonth()]
+    let date = today.getDate()
+    let strEnd = " ";
+    if (date%10 === 1) {strEnd = "st"}
+    else if (date%10 === 2) {strEnd = "nd"}
+    else if (date%10 === 3) {strEnd = "rd"}
+    else {strEnd = "th"}
+    let currentDate = weekday + ", " + date + strEnd + " " + month + " "
+    document.getElementById("dateDate").innerHTML = currentDate
+  </script>
+  <script>
+    let time = new Date()
+    const hour = time.getHours()
+    const minute = time.getMinutes()
+    let currentTime = hour + ":" + minute
+    document.getElementById("dateTime").innerHTML = currentTime
+  </script>
 </body>
-<script type = "text/javascript" src = "new.js"></script>
+
+
 </html>
 
