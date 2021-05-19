@@ -5,7 +5,7 @@ Implemented with HTML/CSS/JavaScript
 
 Also icons were imported from FontAwesome
 
-![image](https://user-images.githubusercontent.com/74583784/118762495-40c05200-b8b1-11eb-912f-040d2a4fb11d.png)
+![image](https://user-images.githubusercontent.com/74583784/118762585-6ea59680-b8b1-11eb-9b0c-e0a1f1bbb18a.png)
 
 * Item can be marked as finished when clicked, it changes the color to green.
 * All items can be deleted by pressing "broom" icom
